@@ -30,7 +30,7 @@ Um site para venda e compra de jogos onde o vendedor pode fazer o cadastro e lis
 Clone o repositório e instale as dependências necessárias:
 
 ```bash
-git clone https://github.com/seu-usuario/seu-projeto.git
+git clone https://github.com/MatheusSikeira/Loja-de-Jogos-Front-End.git
 cd seu-projeto
 yarn
 yarn start
