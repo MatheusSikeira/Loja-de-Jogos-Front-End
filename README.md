@@ -1,4 +1,4 @@
-<span style="font-size: 50px;">Site da Loja de Jogos Scorpion Games</span>
+### Site da Loja de Jogos Scorpion Games
 
 ![Banner do Projeto](./Loja-de-Jogos-Front-End/Scorpion-Games/src/assets/ScorpionGames.png)
 
