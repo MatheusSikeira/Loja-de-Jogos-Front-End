@@ -13,7 +13,7 @@ Uma breve descrição do projeto. Explique o que ele faz, suas funcionalidades e
 ## Introdução
 
 Um site para venda e compra de jogos onde o vendedor pode fazer o cadastro e listagem dos seus jogos, e o comprador pode encontrar os itens cadastrados na loja, além disso os usuários podem fazer criticas e enviar fotos das suas gameplays ou conteúdo relacionado ao jogo.
-![Foto do Site](./Loja-de-Jogos-Front-End/Scorpion-Games/src/assets/scre2.png)
+![Foto do Site](./Loja-de-Jogos-Front-End/Scorpion-Games/src/assets/scre1.png)
 
 ## Funcionalidades
 
