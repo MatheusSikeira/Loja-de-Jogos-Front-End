@@ -1,4 +1,4 @@
-###       Site da Loja de Jogos Scorpion Games
+#### Site da Loja de Jogos Scorpion Games
 
 ![Banner do Projeto](./Loja-de-Jogos-Front-End/Scorpion-Games/src/assets/ScorpionGames.png)
 
