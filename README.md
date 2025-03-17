@@ -8,7 +8,7 @@ Um projeto feito em React com integrações com API's e Banco de Dados.
 
 - [Introdução](#introdução)
 - [Funcionalidades](#funcionalidades)
-- [Instalação e uso](#instalação e uso)
+- [Instalação e uso](#Instalação e uso)
 
 ## Introdução
 
