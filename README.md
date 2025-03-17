@@ -2,7 +2,7 @@
 
 ![Banner do Projeto](./Loja-de-Jogos-Front-End/Scorpion-Games/src/assets/ScorpionGames.png)
 
-Uma breve descrição do projeto. Explique o que ele faz, suas funcionalidades e por que ele é útil.
+Um projeto feito em React com integrações com API's e Banco de Dados.
 
 ## Sumário
 
