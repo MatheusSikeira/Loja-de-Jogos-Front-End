@@ -17,7 +17,9 @@ Um site para venda e compra de jogos onde o vendedor pode fazer o cadastro e lis
 ## Funcionalidades
 
 - Funcionalidade 1: Um formulário de cadastro para o jogo.
+![Banner do Projeto](./Loja-de-Jogos-Front-End/Scorpion-Games/src/assets/.png)
 - Funcionalidade 2: Uma página de listagem de jogos.
+![Banner do Projeto](./Loja-de-Jogos-Front-End/Scorpion-Games/src/assets/.png)
 
 ## Funcionalidades em desevolvimento
 - Funcionalidade 1: Página para comprar jogos.
@@ -28,7 +30,10 @@ Um site para venda e compra de jogos onde o vendedor pode fazer o cadastro e lis
 
 Clone o repositório e instale as dependências necessárias:
 
-```bash
+``bash
 git clone https://github.com/seu-usuario/seu-projeto.git
 cd seu-projeto
 yarn
+
+## Uso
+yarn start
