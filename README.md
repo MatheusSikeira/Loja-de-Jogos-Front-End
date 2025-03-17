@@ -7,8 +7,7 @@ Uma breve descrição do projeto. Explique o que ele faz, suas funcionalidades e
 
 - [Introdução](#introdução)
 - [Funcionalidades](#funcionalidades)
-- [Instalação](#instalação)
-- [Uso](#uso)
+- [Instalação e uso](#instalação e uso)
 
 ## Introdução
 
@@ -26,14 +25,12 @@ Um site para venda e compra de jogos onde o vendedor pode fazer o cadastro e lis
 - Funcionalidade 2: Envio de critícas e imagens.
 - Funcionalidade 3: Página de favoritos.
 
-## Instalação
+## Instalação e uso
 
 Clone o repositório e instale as dependências necessárias:
 
-``bash
+```bash
 git clone https://github.com/seu-usuario/seu-projeto.git
 cd seu-projeto
 yarn
-
-## Uso
 yarn start
