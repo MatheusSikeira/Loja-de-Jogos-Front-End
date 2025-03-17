@@ -12,13 +12,17 @@ Uma breve descrição do projeto. Explique o que ele faz, suas funcionalidades e
 
 ## Introdução
 
-Explique com mais detalhes o propósito do projeto, seu contexto e os problemas que ele resolve.
+Um site para venda e compra de jogos onde o vendedor pode fazer o cadastro e listagem dos seus jogos, e o comprador pode encontrar os itens cadastrados na loja, além disso os usuários podem fazer criticas e enviar fotos das suas gameplays ou conteúdo relacionado ao jogo.
 
 ## Funcionalidades
 
-- Funcionalidade 1: Descrição
-- Funcionalidade 2: Descrição
-- Funcionalidade 3: Descrição
+- Funcionalidade 1: Um formulário de cadastro para o jogo.
+- Funcionalidade 2: Uma página de listagem de jogos.
+
+## Funcionalidades em desevolvimento
+- Funcionalidade 1: Página para comprar jogos.
+- Funcionalidade 2: Envio de critícas e imagens.
+- Funcionalidade 3: Página de favoritos.
 
 ## Instalação
 
@@ -27,4 +31,4 @@ Clone o repositório e instale as dependências necessárias:
 ```bash
 git clone https://github.com/seu-usuario/seu-projeto.git
 cd seu-projeto
-npm install
+yarn
