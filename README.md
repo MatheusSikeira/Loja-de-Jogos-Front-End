@@ -8,7 +8,7 @@ Um projeto feito em React com integrações com API's e Banco de Dados.
 
 - [Introdução](#introdução)
 - [Funcionalidades](#funcionalidades)
-- [Instalação e uso](#Instalação e uso)
+- [Instalação e uso](#instalação)
 
 ## Introdução
 
@@ -26,7 +26,7 @@ Um site para venda e compra de jogos onde o vendedor pode fazer o cadastro e lis
 - Funcionalidade 3: Página de favoritos.
 - Funcionalidade 4: Página de listagem de jogos.
 
-## Instalação e uso
+## Instalação
 
 Clone o repositório e instale as dependências necessárias:
 
