@@ -1,4 +1,5 @@
-### Site da Loja de Jogos Scorpion Games.
+<span style="font-size: 24px;">Site da Loja de Jogos Scorpion Games</span>
+
 ![Banner do Projeto](./Loja-de-Jogos-Front-End/Scorpion-Games/src/assets/ScorpionGames.png)
 
 Uma breve descrição do projeto. Explique o que ele faz, suas funcionalidades e por que ele é útil.
