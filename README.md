@@ -13,12 +13,12 @@ Um projeto feito em React com integrações com API Nodejs e Banco de Dados.
 ## Introdução
 
 Um site para venda e compra de jogos onde o vendedor pode fazer o cadastro e listagem dos seus jogos, e o comprador pode encontrar os itens cadastrados na loja, além disso os usuários podem fazer criticas e enviar fotos das suas gameplays ou conteúdo relacionado ao jogo.
-![Foto do Site](./Loja-de-Jogos-Front-End/Scorpion-Games/src/assets/scre1.png)
+![Foto do Site](./Scorpion-Games-API/imagens/ScorpionGames.png)
 
 ## Funcionalidades
 
 - Funcionalidade 1: Accordions no menu inicial do site.
-![Foto do Formulário](./Scorpion-Games-API/imagens/ScorpionGames.png)
+![Foto do Formulário](./Scorpion-Games-API/imagens/cap1)
 - Funcionalidade 2: Formulário de cadastro de jogos.
 ![Foto do Formulário](./)
 - Funcionalidade 3: Página de listagem de jogos cadastrados.
