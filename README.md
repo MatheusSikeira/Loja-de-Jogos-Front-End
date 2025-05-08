@@ -17,7 +17,7 @@ Um site para venda e compra de jogos onde o vendedor pode fazer o cadastro e lis
 ## Funcionalidades
 
 - Funcionalidade 1: Accordions no menu inicial do site.
-![Foto dos accordions](./Scorpion-Games-API/imagens/cap2.png)
+![Foto dos accordions](././Scorpion-Games-API/imagens/cap2.png)
 - Funcionalidade 2: Formulário de cadastro de jogos.
 ![Foto do Formulário](././Scorpion-Games-API/imagens/cap1.png)
 ![Foto do Formulário](././Scorpion-Games-API/imagens/cap3.png)
