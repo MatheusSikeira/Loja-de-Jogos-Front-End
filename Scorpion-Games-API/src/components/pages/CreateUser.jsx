@@ -74,7 +74,7 @@ const CreateUser = () => {
                     handlerChange={handleChangeUser}
                 />
 
-                <Button title="Cadastrar" />
+                <Button label="Cadastrar" />
             </form>
         </section>
     );

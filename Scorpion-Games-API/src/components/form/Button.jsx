@@ -1,18 +1,16 @@
 import styles from "./button.module.css";
 
-const Button = ({title}) =>{
-
     // function saveBooks(){
     //     console.log("Olá mundo")
     // }
     
     //onclick para adicionar um evento no botão
-
-    return(
-        <div>
-            <button>{title}</button>
-        </div>
-    );
-}
+const Button = ({ label, onClick }) => {
+  return (
+    <button onClick={onClick}>
+      {label}
+    </button>
+  );
+};
 
 export default Button;

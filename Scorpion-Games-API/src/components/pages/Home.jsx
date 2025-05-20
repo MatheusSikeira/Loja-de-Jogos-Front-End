@@ -2,10 +2,15 @@ import { useState } from "react";
 import styles from './home.module.css';
 
 const Home = () => {
-  const [activeIndex, setActiveIndex] = useState(null);
+  // Array de estados individuais para cada accordion
+  const [activeIndices, setActiveIndices] = useState(Array(5).fill(false));
 
   const toggleAccordion = (index) => {
-    setActiveIndex(activeIndex === index ? null : index);
+    // Cria uma cópia do array de estados
+    const newActiveIndices = [...activeIndices];
+    // Inverte o estado apenas do accordion clicado
+    newActiveIndices[index] = !newActiveIndices[index];
+    setActiveIndices(newActiveIndices);
   };
 
   const accordionData = [
@@ -59,46 +64,67 @@ const Home = () => {
     },
   ];
 
+  // Componente Accordion com animação independente
+  const Accordion = ({ item, index }) => {
+    const isActive = activeIndices[index];
+    
+    // ID único para cada kunai baseado no índice
+    const kunaiId = `kunai-${index}`;
+    
+    return (
+      <div className={styles.accordion_container}>
+        <div
+          className={`${styles.grid_title} ${
+            isActive ? styles.active : styles.inactive
+          }`}
+          onClick={() => toggleAccordion(index)}
+        >
+          <img
+            src={item.icon}
+            alt={item.title}
+            className={styles.title_icon}
+          />
+          <h3>{item.title}</h3>
+          <span className={styles.arrow}>
+            <img
+              id={kunaiId}
+              src={isActive ? "./src/assets/kunai-up.png" : "./src/assets/kunai-down.png"}
+              alt={isActive ? "Fechar" : "Abrir"}
+              className={styles.kunai_icon}
+              // Adiciona a classe de animação diretamente no elemento
+              style={{ transform: isActive ? 'rotate(360deg)' : 'rotate(0deg)' }}
+            />
+          </span>
+        </div>
+        {isActive && (
+          <div className={styles.accordion_content}>
+            {item.image.map((image, imgIndex) => (
+              <img
+                key={imgIndex}
+                src={image}
+                alt={`${item.title} ${imgIndex + 1}`}
+                className={styles.content_image}
+              />
+            ))}
+            <p>{item.content}</p>
+          </div>
+        )}
+      </div>
+    );
+  };
+
   return (
     <section className={styles.home_container}>
       <h1>Bem-vindo à loja de games Scorpion</h1>
       <p>"Get over here! Buy our games!"</p>
-      <div className={styles.grid_container}>
+      
+      <div className={styles.accordions_wrapper}>
         {accordionData.map((item, index) => (
-          <div key={index} className={styles.grid_item}>
-            <div
-              className={`${styles.grid_title} ${
-              activeIndex === index ? styles.active : styles.inactive
-              }`}
-              onClick={() => toggleAccordion(index)}
-            >
-              <img
-                src={item.icon}
-                alt={item.title}
-                className={styles.title_icon}
-              />
-              <h3>{item.title}</h3>
-            <span className={styles.arrow}>
-              <img
-                src={activeIndex === index ? "./src/assets/kunai-up.png" : "./src/assets/kunai-down.png"}
-                alt={activeIndex === index ? "Fechar" : "Abrir"}
-                className={styles.kunai_icon}
+          <div key={index} className={styles.accordion_item_wrapper}>
+            <Accordion
+              item={item}
+              index={index}
             />
-            </span>
-            </div>
-            {activeIndex === index && (
-              <div className={styles.accordion_content}>
-                {item.image.map((image, imgIndex) => (
-                    <img
-                      key={imgIndex}
-                      src={image}
-                      alt={`${item.title} ${imgIndex + 1}`}
-                      className={styles.content_image}
-                    />
-                  ))}
-                <p>{item.content}</p>
-              </div>
-            )}
           </div>
         ))}
       </div>

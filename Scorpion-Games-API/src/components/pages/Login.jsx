@@ -40,7 +40,7 @@ const Login = () => {
           handlerChange={handleChange}
         />
 
-        <Button title="Entrar" />
+        <Button label="Entrar" />
       </form>
     </section>
   );

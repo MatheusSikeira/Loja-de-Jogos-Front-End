@@ -24,6 +24,10 @@ const ListGame = () => {
     fetchGames();
   }, []);
 
+  const handleDelete = (id_jogo) => {
+    setGame((prevGames) => prevGames.filter((jogo) => jogo.id_jogo !== id_jogo));
+  };
+
   if (loading) return <div>Carregando jogos...</div>;
   if (error) return <div>Erro: {error}</div>;
 
@@ -34,11 +38,13 @@ const ListGame = () => {
         {game.map((jogo) => (
           <GameCards
             key={jogo.id_jogo}
+            id_jogo={jogo.id_jogo}
             nome={jogo.nome}
             desenvolvedor={jogo.desenvolvedor}
             plataforma={jogo.plataforma}
             preco={jogo.preco}
             imagem={jogo.imagem_url}
+            onDelete={handleDelete} // <- passa a função de remoção
           />
         ))}
       </div>

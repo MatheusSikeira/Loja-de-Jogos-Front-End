@@ -1,13 +1,12 @@
 const express = require('express');
 
-/* IMPORTA O MODEL DE LIVRO */
 const modelCategoria = require('../model/modelCategoria');
 
 /* GERECIADOR DE ROTAS */
 const router = express.Router();
 
 /* ROTA DE INSERÇÃO DE CATEGORIA */
-router.post('/inserirCAtegoria', (req, res)=>{
+router.post('/inserirCategoria', (req, res)=>{
 
     let { nome_categoria} = req.body;
 

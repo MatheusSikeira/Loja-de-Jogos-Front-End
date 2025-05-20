@@ -7,6 +7,8 @@ import CreateGame from './components/pages/CreateGame.jsx';
 import ListGame from './components/pages/ListGame.jsx';
 import TelaLogin from './components/pages/Login.jsx';
 import CadastroUsuario from './components/pages/CreateUser.jsx';
+import GameDetail from './components/pages/GameDetail.jsx';
+import 'react-toastify/dist/ReactToastify.css';
 
 function App() {
   return (
@@ -25,6 +27,7 @@ function App() {
                 <Route path='/listGame' element={<ListGame/>}/>
                 <Route path='/login' element={<TelaLogin/>}/>
                 <Route path='/cadastro' element={<CadastroUsuario/>}/>
+                <Route path='/gamedetail/:id_game' element={<GameDetail/>}/>
 
               </Route>
             </Routes>
