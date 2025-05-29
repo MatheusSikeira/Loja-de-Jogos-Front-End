@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from "react";
+import { toast, ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import style from "./listgame.module.css";
 import GameCards from "../GameCards.jsx";
 
@@ -16,16 +18,35 @@ const ListGame = () => {
         setGame(data.data);
       } catch (err) {
         setError(err.message);
+        toast.error("Erro ao carregar jogos!");
       } finally {
         setLoading(false);
       }
     };
-
     fetchGames();
   }, []);
 
-  const handleDelete = (id_jogo) => {
+  const handleDelete = (id_jogo, nomeJogo) => {
     setGame((prevGames) => prevGames.filter((jogo) => jogo.id_jogo !== id_jogo));
+    toast.success(`Jogo "${nomeJogo}" excluído com sucesso!`, {
+      position: "top-right",
+      autoClose: 3000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+    });
+  };
+
+  const handleEditSuccess = (nomeJogo) => {
+    toast.info(`Redirecionando para editar "${nomeJogo}"...`, {
+      position: "top-right",
+      autoClose: 2000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+    });
   };
 
   if (loading) return <div>Carregando jogos...</div>;
@@ -44,10 +65,25 @@ const ListGame = () => {
             plataforma={jogo.plataforma}
             preco={jogo.preco}
             imagem={jogo.imagem_url}
-            onDelete={handleDelete} // <- passa a função de remoção
+            onDelete={handleDelete}
+            onEditClick={handleEditSuccess}
           />
         ))}
       </div>
+      
+      {/* Container dos Toasts */}
+      <ToastContainer
+        position="top-right"
+        autoClose={3000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme="light"
+      />
     </section>
   );
 };

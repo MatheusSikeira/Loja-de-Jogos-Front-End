@@ -54,6 +54,6 @@ const modelJogo = connection.define(
   }
 );
 
-//modelJogo.sync({ alter: true });
+// modelJogo.sync({ alter: true });
 
 module.exports = modelJogo;

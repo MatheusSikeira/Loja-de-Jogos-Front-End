@@ -27,25 +27,25 @@
   width: 300px;
   height: auto;
   border-radius: 8px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 12px rgba(255, 0, 0, 0.2);
 }
 
 .titulo {
   font-size: 36px;
   font-weight: bold;
-  color: #000000;
+  color: #ffffff;
   margin-bottom: 10px;
 }
 
 .autor {
   font-size: 24px;
-  color: #000000;
+  color: #910000;
   margin-bottom: 20px;
 }
 
 .descricao {
   font-size: 18px;
- color: #000000;
+ color: #ffffff;
   text-align: justify;
   line-height: 1.5;
   margin-bottom: 30px;
@@ -69,4 +69,9 @@
 
 .btn:hover {
   background: linear-gradient(180deg, #13d702 0%, #11b335 100%);
+}
+.preco,
+.ano
+{
+  color: #ffffff;
 }

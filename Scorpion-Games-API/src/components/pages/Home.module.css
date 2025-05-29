@@ -1,130 +1,378 @@
 .home_container {
-  text-align: center;
-  padding: 20px;
-  background-color: #ffffff;
+    text-align: center;
+    padding: 20px;
+    max-width: 1400px;
+    margin: 0 auto;
+    box-sizing: border-box;
 }
 
 .home_container h1 {
-  font-size: 2rem;
-  margin-top: 100px;
+    font-size: 2rem;
+    margin-top: 100px;
+    margin-bottom: 20px;
+    color: #850000;
+    font-weight: bold;
 }
 
 .home_container p {
-  font-size: 1.2rem;
-  color: #555;
-  margin-bottom: 20px;
+    font-size: 1.2rem;
+    color: #555;
+    margin-bottom: 20px;
+    line-height: 1.6;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
 }
-
-/* Nova classe para o wrapper dos accordions */
 .accordions_wrapper {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    padding: 20px 0;
 }
-
-/* Nova classe para cada wrapper de accordion individual */
 .accordion_item_wrapper {
-  flex: 0 0 19%;
-  min-width: 200px;
-  margin-bottom: 30px;
+    flex: 0 0 19%;
+    min-width: 200px;
+    margin-bottom: 30px;
+    transition: all 0.3s ease;
 }
 
-/* Estilo para o container do accordion */
+/* === CONTAINER DO ACCORDION === */
+
 .accordion_container {
-  background-color: #fff;
-  border: 2px solid #ddd;
-  border-radius: 10px;
-  overflow: hidden;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background-color: #fff;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    height: 100%;
 }
 
 .accordion_container:hover {
-  transform: scale(1.05);
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
 }
 
+/* === TÍTULO DO ACCORDION === */
+
 .grid_title {
-  cursor: pointer;
-  padding: 10px;
-  text-align: center;
-  background-color: #f9f9f9;
-  border-bottom: 2px solid #ddd;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
+    cursor: pointer;
+    padding: 10px;
+    text-align: center;
+    background-color: #f9f9f9;
+    border-bottom: 2px solid #ddd;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    min-height: 60px;
+    transition: background-color 0.3s ease;
 }
 
 .grid_title.active {
-  background-color: #ffc400;
-  border-bottom: none;
-}
-
-.title_icon {
-  width: 200px;
-  height: 200px;
-  object-fit: cover;
-  border-radius: 5px;
+    background-color: #ffc400;
+    border-bottom: none;
 }
 
 .grid_title h3 {
-  font-size: 1.2rem;
-  margin: 0;
-  color: #333;
-  text-align: center;
+    font-size: 1.2rem;
+    margin: 0;
+    color: #333;
+    text-align: center;
+    font-weight: 600;
 }
 
-.accordion_content {
-  padding: 15px;
-  background-color: #fff;
-  border-top: 2px solid #ddd;
-  text-align: center;
+/* === ÍCONES E IMAGENS === */
+
+.title_icon {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 5px;
 }
 
 .content_image {
-  width: 100%;
-  height: auto;
-  display: block;
-  border-radius: 10px;
-  margin-bottom: 10px;
-}
-
-.accordion_content p {
-  font-size: 1rem;
-  color: #555;
-  line-height: 1.5;
-}
-
-.arrow {
-  margin-right: 10px;
-  font-size: 0.8rem;
-  display: flex;
-  align-items: center;
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    max-height: 250px;
+    object-fit: cover;
 }
 
 .kunai_icon {
-  width: 50px;
-  height: auto;
-  transition: transform 0.5s ease-in-out;
+    width: 50px;
+    height: auto;
+    transition: transform 0.5s ease-in-out;
 }
 
-/* Responsividade para telas menores */
-@media (max-width: 1200px) {
-  .accordion_item_wrapper {
-    flex: 0 0 30%;
-  }
+/* === CONTEÚDO DO ACCORDION === */
+
+.accordion_content {
+    padding: 15px;
+    background-color: #fff;
+    border-top: 2px solid #ddd;
+    text-align: center;
 }
 
-@media (max-width: 768px) {
-  .accordion_item_wrapper {
-    flex: 0 0 45%;
-  }
+.accordion_content p {
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.5;
+    margin: 0;
 }
 
-@media (max-width: 576px) {
-  .accordion_item_wrapper {
-    flex: 0 0 100%;
-  }
+/* === SETA === */
+
+.arrow {
+    margin-right: 10px;
+    font-size: 0.8rem;
+    display: flex;
+    align-items: center;
+}
+
+/* === MEDIA QUERIES PARA RESPONSIVIDADE === */
+
+/* Desktop grande (acima de 1400px) */
+@media screen and (min-width: 1400px) {
+    .home_container {
+        padding: 30px;
+    }
+    
+    .accordions_wrapper {
+        gap: 20px;
+    }
+    
+    .accordion_item_wrapper {
+        flex: 0 0 18%;
+    }
+}
+
+/* Desktop médio (1200px - 1400px) */
+@media screen and (max-width: 1400px) {
+    .accordion_item_wrapper {
+        flex: 0 0 22%;
+    }
+}
+
+/* Tablets e desktop pequeno (768px - 1200px) */
+@media screen and (max-width: 1200px) {
+    .home_container {
+        padding: 15px;
+    }
+    
+    .home_container h1 {
+        margin-top: 60px;
+        font-size: 1.8rem;
+    }
+    
+    .accordion_item_wrapper {
+        flex: 0 0 30%;
+        min-width: 250px;
+    }
+    
+    .accordions_wrapper {
+        gap: 12px;
+    }
+}
+
+/* Tablets (576px - 768px) */
+@media screen and (max-width: 768px) {
+    .home_container {
+        padding: 12px;
+    }
+    
+    .home_container h1 {
+        margin-top: 40px;
+        font-size: 1.6rem;
+    }
+    
+    .home_container p {
+        font-size: 1.1rem;
+        margin-bottom: 15px;
+    }
+    
+    .accordion_item_wrapper {
+        flex: 0 0 45%;
+        min-width: 200px;
+        margin-bottom: 20px;
+    }
+    
+    .title_icon {
+        width: 150px;
+        height: 150px;
+    }
+    
+    .grid_title h3 {
+        font-size: 1.1rem;
+    }
+    
+    .accordion_content {
+        padding: 12px;
+    }
+}
+
+/* Smartphones (320px - 576px) */
+@media screen and (max-width: 576px) {
+    .home_container {
+        padding: 10px;
+    }
+    
+    .home_container h1 {
+        margin-top: 20px;
+        font-size: 1.4rem;
+        margin-bottom: 15px;
+    }
+    
+    .home_container p {
+        font-size: 1rem;
+        margin-bottom: 12px;
+    }
+    
+    .accordion_item_wrapper {
+        flex: 0 0 100%;
+        min-width: auto;
+        margin-bottom: 15px;
+    }
+    
+    .accordions_wrapper {
+        gap: 8px;
+        padding: 10px 0;
+    }
+    
+    .title_icon {
+        width: 120px;
+        height: 120px;
+    }
+    
+    .grid_title {
+        padding: 8px;
+        min-height: 50px;
+        flex-direction: column;
+        gap: 5px;
+    }
+    
+    .grid_title h3 {
+        font-size: 1rem;
+    }
+    
+    .accordion_content {
+        padding: 10px;
+    }
+    
+    .accordion_content p {
+        font-size: 0.9rem;
+    }
+    
+    .kunai_icon {
+        width: 35px;
+    }
+    
+    .content_image {
+        max-height: 200px;
+    }
+}
+
+/* Smartphones pequenos (até 320px) */
+@media screen and (max-width: 320px) {
+    .home_container {
+        padding: 8px;
+    }
+    
+    .home_container h1 {
+        font-size: 1.2rem;
+        margin-top: 15px;
+    }
+    
+    .home_container p {
+        font-size: 0.9rem;
+    }
+    
+    .title_icon {
+        width: 100px;
+        height: 100px;
+    }
+    
+    .grid_title h3 {
+        font-size: 0.9rem;
+    }
+    
+    .accordion_content p {
+        font-size: 0.8rem;
+    }
+    
+    .kunai_icon {
+        width: 30px;
+    }
+}
+
+/* === ORIENTAÇÃO LANDSCAPE PARA MOBILE === */
+
+@media screen and (max-height: 600px) and (orientation: landscape) and (max-width: 1024px) {
+    .home_container h1 {
+        margin-top: 10px;
+        font-size: 1.3rem;
+    }
+    
+    .accordion_item_wrapper {
+        margin-bottom: 10px;
+    }
+    
+    .title_icon {
+        width: 80px;
+        height: 80px;
+    }
+    
+    .grid_title {
+        min-height: 40px;
+        padding: 5px;
+    }
+    
+    .accordion_content {
+        padding: 8px;
+    }
+}
+
+/* === ANIMAÇÕES E TRANSIÇÕES MELHORADAS === */
+
+@media (prefers-reduced-motion: no-preference) {
+    .accordion_item_wrapper {
+        animation: fadeInUp 0.6s ease-out;
+    }
+    
+    .accordion_item_wrapper:nth-child(even) {
+        animation-delay: 0.1s;
+    }
+    
+    .accordion_item_wrapper:nth-child(odd) {
+        animation-delay: 0.2s;
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* === ACESSIBILIDADE === */
+
+@media (prefers-reduced-motion: reduce) {
+    .accordion_container,
+    .kunai_icon,
+    .accordion_item_wrapper {
+        transition: none !important;
+        animation: none !important;
+    }
+    
+    .accordion_container:hover {
+        transform: none;
+    }
 }

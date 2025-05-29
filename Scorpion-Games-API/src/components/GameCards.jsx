@@ -1,10 +1,16 @@
 import React from "react";
+import { toast } from 'react-toastify';
 import style from "./GameCards.module.css";
 import Button from "./form/Button.jsx";
 import { Link } from 'react-router-dom';
 
-const GameCards = ({ nome, desenvolvedor, plataforma, preco, imagem, id_jogo, onDelete }) => {
+const GameCards = ({ nome, desenvolvedor, plataforma, preco, imagem, id_jogo, onDelete, onEditClick }) => {
   const DeleteGame = async () => {
+    // Confirmação antes de excluir
+    if (!window.confirm(`Tem certeza que deseja excluir o jogo "${nome}"?`)) {
+      return;
+    }
+
     try {
       const response = await fetch(`http://localhost:5000/excluirJogo/${id_jogo}`, {
         method: "DELETE",
@@ -12,13 +18,30 @@ const GameCards = ({ nome, desenvolvedor, plataforma, preco, imagem, id_jogo, on
           "Content-Type": "application/json",
         }
       });
-
+      
       const data = await response.json();
-      console.log("Deletado com sucesso:", data);
-      if (onDelete) onDelete(id_jogo);
+      console.log("Resposta da exclusão:", data);
+      
+      if (response.ok) {
+        // Chama a função onDelete passando o nome do jogo também
+        if (onDelete) onDelete(id_jogo, nome);
+      } else {
+        toast.error(`Erro ao excluir jogo: ${data.mensageStatus || 'Erro desconhecido'}`, {
+          position: "top-right",
+          autoClose: 4000,
+        });
+      }
     } catch (e) {
       console.log("Erro ao deletar:", e);
+      toast.error("Erro de conexão ao excluir jogo!", {
+        position: "top-right",
+        autoClose: 4000,
+      });
     }
+  };
+
+  const handleEditClick = () => {
+    if (onEditClick) onEditClick(nome);
   };
 
   return (
@@ -29,10 +52,12 @@ const GameCards = ({ nome, desenvolvedor, plataforma, preco, imagem, id_jogo, on
         <p>Desenvolvedor: {desenvolvedor}</p>
         <p>Plataforma: {plataforma}</p>
         <p className={style.price}>Preço: R$ {parseFloat(preco).toFixed(2)}</p>
-
         <div className={style.buttons}>
           <Link to={`/gamedetail/${id_jogo}`}>
             <Button label="Detalhes" />
+          </Link>
+          <Link to={`/updateGame/${id_jogo}`} onClick={handleEditClick}>
+            <Button label="Editar" />
           </Link>
           <Button label="Excluir" onClick={DeleteGame} />
         </div>
